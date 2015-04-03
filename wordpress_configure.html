@@ -1,0 +1,29 @@
+<template name="configureLoginServiceDialogForWordPress">
+	<p>
+		First, you'll need to make sure the <a href="http://wp-api.org/guides/authentication.html#oauth-authentication" target="_blank">WP JSON API plugin and the OAuth plugin</a> are installed and
+		active. These will soon be included in WordPress core but for now must be installed.
+		<br />
+		Next, follow these steps:
+	</p>
+	<ol>
+		<li>
+			Generate an API consumer key, by running the following on your server from terminal:
+			<code>wp oauth1 add</code>
+			This will out put the following:
+			<code>
+				Key: *************
+				Secret: ********************************************
+			</code>
+			Copy and paste those values below.
+		</li>
+		<li>
+			WordPress API endpoint: <span class="url">{{siteUrl}}/wp-json</span>
+		</li>
+		<li>
+			API Key: <span class="url">{{siteUrl}}</span>
+		</li>
+		<li>
+			API Secret: <span class="url">{{siteUrl}}_oauth/wordpress</span>
+		</li>
+	</ol>
+</template>
